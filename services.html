@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quantum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+    
+    
+    <style>
+      .navbar {
+          margin-bottom: 0;
+          border-radius: 0;
+          background-color: #212223;
+          color: #FFF;
+          padding: 1% 0;
+          font-size: 1.2em;
+          border: 0;
+      }
+      
+      .navbar-brand {
+          float: left;
+          min-height: 55px;
+          padding-top: 20px;
+          padding-bottom: 40px;
+          font-size: 60px;
+          font-family: 'Pathway Gothic One', sans-serif;
+          
+      }
+        
+        #logotext {
+            color: white; 
+        }
+      
+      .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
+          color: #FFF;
+          background-color: #3a3a3a;
+      }
+        
+        .navbar-inverse .navbar-nav li a {
+            color: #D5D5D5;
+        }
+        
+        
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+            text-transform: uppercase;
+        }
+        
+        .carousel-inner {
+            height: auto;
+            width: auto;
+        }
+        
+        .carousel-inner>.item>img {
+            max-width: 100%;
+            width: 100%;
+            max-height: 600px;
+        }
+        
+        .btn {
+            font-size: 18px;
+            color: #FFF;
+            padding: 12px 22px;
+            background-color: #3a3a3a;
+            border: 2px solid #FFF;
+        }
+        
+        #shuttle {
+            height: auto;
+            width: auto;
+        }
+        
+        .container {
+            margin: 4% auto;
+        }
+        
+        #icon {
+            max-width: 200px;
+            margin: 1% auto;
+        }
+        
+        footer {
+            width: 100%;
+            background-color: black;
+            padding: 2%;
+            color: #FFF;
+        }
+        
+        .fa {
+            padding: 15px;
+            font-size: 30px;
+            color: #FFF;
+        }
+        
+        .fa-bar-chart, .fa-rocket, .fa-space-shuttle {
+            color: orangered;
+            font-size: 100px;
+            padding-bottom: 65px;
+        }
+        
+        .footer:hover {
+            color: #D5D5D5;
+            text-decoration: none;
+        }
+        
+        .service1, .service2, .service3 {
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            #myCarousel {
+            margin-top: 58px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+            #icon {
+                max-width: 150px;
+            }
+            
+            h2 {
+                font-size: 1.7em;
+            }
+        }
+        
+        #navbtn {
+            padding: 5px;
+        }
+        
+        #aboutimg {
+            position: relative; top: -65px; left: 50px;
+            max-height: 450px;
+        }
+        
+        .social {
+            cursor: pointer;
+        }
+        
+        .servicestext {
+            text-align: left;
+        }
+        
+        
+  </style>
+ 
+</head>   
+<!----------------------------------  Start -------------------------------------->    
+<body>
+    
+    <!----------------------- Nav Bar ------------------------->
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+        <div class='container-fluid'>
+            <div class='navbar-header'>
+                <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </button>
+                <a class='navbar-brand' id='logotext' href='index.html'>QUANTUM</a>
+            </div>
+            <div class='collapse navbar-collapse' id='myNavbar'>
+                <ul class='nav navbar-nav navbar-right' id='navbtn'>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li class='active'><a href='services.html'>Services</a></li>
+                    <li><a href='contact.html'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    <!------------------------- Start of image slider -------------------------------->
+    <div id='myCarousel' class='carousel slide' data-ride='carousel'>
+        <ol class='carousel-indicators'>
+            <li data-target='#myCarousel' data-slide-to='0' class='active'></li>
+            <li data-target='#myCarousel' data-slide-to='1'></li>
+            <li data-target='#myCarousel' data-slide-to='2'></li>
+        </ol>
+        <div class='carousel-inner' role='listbox'>
+            <div class='item active'>
+            <img src='img/milkyway.png'>
+            <div class='carousel-caption hidden-xs'>
+                <h1>This again?</h1>
+                <br>
+                <button type='button' class='btn btn-default'><a onclick='learnMoreLink()' href='index.html' style='color: white; text-decoration: none'>Alright, come on then.</a></button>
+                </div>
+            </div><!-- End Active -->
+            <div class='item'>
+                <img src='img/spacetelescope.png'>
+            </div>
+            <div class='item'>
+                <img src='img/mars.png'>
+            </div>
+        </div>
+        <!------------------------- Slider Controls ------------------------>
+        <a class='left carousel-control' href='#myCarousel' role='button' data-slide='prev'>
+            <span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span>
+            <span class='sr-only'>Previous</span>
+        </a>
+        
+        <a class='right carousel-control' href='#myCarousel' role='button' data-slide='next'>
+            <span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>
+            <span class='sr-only'>Next</span>
+        </a>
+    </div>
+    <!------------------------------ End of image slider -------------------------------->
+    
+    <div class='container'>
+        <h2 class='text-left'>What we offer...</h2>
+    </div>
+ <!------------------------------------------------------------------------------------->   
+    <div class='container'>
+        <div class='row'>
+            
+            <div class=' service1 col-md-4'><i class="fa fa-bar-chart" aria-hidden="true" style="color: #1e29cc"></i>
+                <p class='servicestext'>Quantum voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+                <p class='servicestext'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            
+            <div class='service2 col-md-4'><i class="fa fa-space-shuttle" aria-hidden="true" style="color: #1e29cc"></i>
+                <p class='servicestext'>Quantum voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+                <p class='servicestext'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <div class='service3 col-md-4'><i class="fa fa-rocket" aria-hidden="true" style="color: #1e29cc"></i>
+                <p class='servicestext'>Quantum voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+                <p class='servicestext'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <!--<div class='col-md-6'>
+                <img id='aboutimg' src="img/space-station.png" class='img-responsive img-rounded'>
+            </div>-->
+        </div>
+    </div>
+    
+    <footer class='container-fluid text-center'>
+        <div class='row'>
+            <div class='col-sm-6'>
+                <h3>Contact</h3>
+                <br>
+                <h4>Optional Address and Contact Info Here</h4>
+            </div>
+            <!--
+            <div class='col-sm-4' id='copyright'>
+                <p>Site created by Lane Harper © 2017 </p>
+            </div>
+-->
+            <div class='col-sm-6'>
+                <h3>Connect</h3>
+                <!-- add the href links once link destinations have been decided. -->
+                <a onclick='socialLink()' class='fa fa-facebook social footer'?></a>
+                <a onclick='socialLink()' class='fa fa-twitter social footer'?></a>
+                <a onclick='socialLink()' class='fa fa-google social footer'?></a>
+                <a onclick='socialLink()' class='fa fa-linkedin social footer'?></a>
+                <a onclick='socialLink()' class='fa fa-youtube social footer'?></a>
+            </div>
+            <span class='col-md-12' id='copyright'>
+                <p>Created by Lane Harper © 2017</p>
+            </span>
+        </div>
+    </footer>
+
+    
+    
+<script>
+ function socialLink() {
+     alert('This will direct to the desired social media profile/site once it has been decided on. :)');
+ }    
+ function learnMoreLink() {
+     alert('This will link to another page on the finished web site, but for now it just sends you back to the home page.');
+</script>    
+</body>
+</html>
